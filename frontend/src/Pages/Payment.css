@@ -1,0 +1,465 @@
+/* Payment Page Container */
+.payment-page-container {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 30px;
+  color: #333;
+}
+
+/* Payment Page Title */
+.payment-page-title {
+  font-size: 2.2rem;
+  font-weight: bold;
+  color: #631104;
+  text-align: center;
+  margin-bottom: 30px;
+  padding-bottom: 15px;
+
+}
+
+/* Booking ID Container */
+.booking-id-container {
+  background: #fff;
+  padding: 25px;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  margin-bottom: 30px;
+}
+
+/* Payment Page Label */
+.payment-page-label {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #495057;
+  margin-bottom: 15px;
+  display: block;
+}
+
+/* Payment Page Input Section */
+.payment-page-input-section {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+/* Payment Page Input Group */
+.payment-page-input-group {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Payment Page Input */
+.payment-page-input {
+  width: 70%;
+  padding: 10px;
+  border: 1px solid #ced4da;
+  border-radius: 6px;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+}
+
+.payment-page-input:focus {
+  border-color: #631104;
+  box-shadow: 0 0 0 0.2rem rgba(99, 17, 4, 0.25);
+  outline: none;
+}
+
+/* Payment Page Button */
+.payment-page-button {
+  padding: 12px 25px;
+  background: #631104;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  white-space: nowrap;
+}
+
+.payment-page-button:hover {
+  background: #7a1c0d;
+  transform: translateY(-2px);
+}
+
+.pay-now-button {
+  width: 100%;
+  margin-top: 20px;
+  padding: 15px;
+  font-size: 1.1rem;
+}
+
+/* Payment Page Error Message */
+.payment-page-error-message {
+  color: #721c24;
+  background: #f8d7da;
+  padding: 12px;
+  border-radius: 6px;
+  text-align: center;
+  margin-top: 15px;
+  border: 1px solid #f5c6cb;
+}
+
+/* Payment Details Container */
+.payment-details-container {
+  background: #fff;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  position: relative;
+}
+
+/* Payment Details Title */
+.payment-details-container h3 {
+  font-size: 1.6rem;
+  color: #3a644f;
+  margin-bottom: 25px;
+  padding-bottom: 10px;
+  border-bottom: 2px solid #e9ecef;
+}
+
+/* Payment Page Details Rows */
+.payment-page-details-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 0;
+  font-size: 1.1rem;
+  border-bottom: 1px solid #e9ecef;
+}
+
+.payment-page-details-row:last-child {
+  border-bottom: none;
+}
+
+.payment-page-details-row strong {
+  color: #495057;
+  font-weight: 600;
+}
+
+.payment-page-details-row span {
+  font-weight: bold;
+  color: #212529;
+}
+
+/* Special Styled Rows */
+.total-amount, .final-price {
+  font-size: 1.2rem;
+  padding: 15px 0;
+}
+
+.total-amount {
+  border-top: 2px solid #e9ecef;
+  margin-top: 10px;
+}
+
+.final-price {
+  font-size: 1.3rem;
+  color: #631104;
+  border-top: 2px solid #e9ecef;
+  margin-top: 15px;
+  padding-top: 20px;
+}
+
+.discount-amount {
+  color: #28a745;
+}
+
+/* Discount Input Row */
+.payment-page-details-row label {
+  margin-right: 15px;
+  color: #495057;
+  font-weight: 500;
+  white-space: nowrap;
+}
+
+.payment-page-details-row input[type="number"] {
+  width: 80px;
+  padding: 8px 12px;
+  border: 1px solid #ced4da;
+  border-radius: 4px;
+  text-align: center;
+  margin-right: 8px;
+}
+
+.payment-page-details-row input[type="number"]:focus {
+  border-color: #631104;
+  box-shadow: 0 0 0 0.2rem rgba(99, 17, 4, 0.25);
+}
+
+/* RIC Coins Display */
+.coins-display {
+  position: absolute;
+  top: 25px;
+  right: 25px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 1rem;
+  font-weight: bold;
+  color: #000;
+  padding: 8px 16px;
+  border: 2px solid #ffcc00;
+  border-radius: 30px;
+  background-color: #fff9e6;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.coin-icon {
+  width: 28px;
+  height: 28px;
+}
+
+.coin-count {
+  font-size: 1.1rem;
+  color: #d4a017;
+}
+
+.back-icon {
+  position: absolute;
+  left: 0;
+  width: 50px;
+  height: 50px;
+  cursor: pointer;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+  padding-left: 25px;
+ 
+}
+
+.back-icon:hover {
+  opacity: 0.8;
+  transform: scale(1.1);
+}
+
+/* Enhanced Responsive Design */
+@media (max-width: 1200px) {
+  .payment-page-container {
+    max-width: 550px;
+  }
+  
+  .payment-page-title {
+    font-size: 2rem;
+  }
+  
+  .payment-page-input {
+    width: 65%;
+  }
+}
+
+@media (max-width: 992px) {
+  .payment-page-container {
+    padding: 25px;
+  }
+  
+  .payment-details-container h3 {
+    font-size: 1.5rem;
+  }
+  
+  .payment-page-details-row {
+    font-size: 1rem;
+  }
+  
+  .coins-display {
+    padding: 6px 14px;
+  font-size: 0.9rem;
+  }
+  
+  .coin-icon {
+    width: 24px;
+    height: 24px;
+  }
+}
+
+@media (max-width: 768px) {
+  .payment-page-container {
+    padding: 20px;
+  }
+
+  .payment-page-title {
+    font-size: 1.8rem;
+  }
+
+  .payment-page-input-section {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .payment-page-button {
+    width: 100%;
+  }
+
+  .coins-display {
+    position: static;
+    margin: 0 auto 20px;
+    justify-content: center;
+    width: fit-content;
+  }
+
+  .payment-details-container {
+    padding: 25px 20px;
+  }
+
+  .payment-page-details-row {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 5px;
+    padding: 10px 0;
+  }
+
+  .payment-page-details-row input[type="number"] {
+    width: 100%;
+    margin: 5px 0;
+  }
+}
+
+@media (max-width: 576px) {
+  .payment-page-container {
+    padding: 15px;
+  }
+  
+  .payment-page-title {
+    font-size: 1.6rem;
+    margin-bottom: 20px;
+  }
+  
+  .booking-id-container,
+  .payment-details-container {
+    padding: 20px 15px;
+  }
+  
+  .payment-page-label {
+    font-size: 1.1rem;
+  }
+  
+  .payment-page-input {
+    width: 100%;
+  }
+  
+  .payment-page-button {
+    padding: 10px;
+    font-size: 0.9rem;
+  }
+  
+  .pay-now-button {
+    padding: 12px;
+  }
+  
+  .final-price {
+    font-size: 1.2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .payment-page-title {
+    font-size: 1.4rem;
+  }
+  
+  .payment-details-container h3 {
+    font-size: 1.3rem;
+  }
+  
+  .payment-page-details-row {
+    font-size: 0.9rem;
+  }
+  
+  .total-amount, .final-price {
+    font-size: 1rem;
+  }
+  
+  .coin-count {
+    font-size: 1rem;
+  }
+  
+  .payment-page-error-message {
+    padding: 10px;
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 360px) {
+  .payment-page-container {
+    padding: 12px;
+  }
+  
+  .payment-page-title {
+    font-size: 1.3rem;
+  }
+  
+  .payment-page-label {
+    font-size: 1rem;
+  }
+  
+  .payment-page-button {
+    font-size: 0.8rem;
+  }
+  
+  .coins-display {
+    padding: 5px 12px;
+    font-size: 0.8rem;
+  }
+  
+  .coin-icon {
+    width: 20px;
+    height: 20px;
+  }
+}
+
+.payment-page-note {
+  color: #666;
+  font-size: 0.9em;
+  margin-top: 5px;
+  font-style: italic;
+}
+
+/* Add these styles to your Payment.css */
+.payment-proof-upload {
+  margin-bottom: 2rem;
+  padding: 1.5rem;
+  background-color: #f8f9fa;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.file-upload-container {
+  margin-top: 1rem;
+}
+
+.file-upload-label {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  background-color: #4CAF50;
+  color: white;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.file-upload-label:hover {
+  background-color: #45a049;
+}
+
+.file-upload-input {
+  display: none;
+}
+
+.upload-status {
+  margin-top: 0.5rem;
+  font-size: 0.9rem;
+  color: #666;
+}
+
+.proof-preview {
+  margin-top: 1rem;
+}
+
+.proof-preview a {
+  color: #2196F3;
+  text-decoration: none;
+  margin-left: 0.5rem;
+}
+
+.proof-preview a:hover {
+  text-decoration: underline;
+}

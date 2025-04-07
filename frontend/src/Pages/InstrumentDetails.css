@@ -1,0 +1,382 @@
+.instrument-details-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  align-items: start;
+}
+
+.image-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.name-section {
+  font-size: 1.7rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.instrument-image {
+  width: 100%;
+  max-width: 350px;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  margin-top: 10px;
+}
+
+/* Right Section: Details */
+.details-section {
+  text-align: left;
+  padding: 20px;
+  background: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.details-section h2 {
+  margin-bottom: 15px;
+  font-size: 2rem;
+  color: #333;
+}
+
+.amount-section {
+  margin-bottom: 20px;
+}
+
+.amount-section h4 {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.amount-section select {
+  width: 80%;
+  padding: 10px;
+  font-size: 1rem;
+  border: 1.5px solid #ccc;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  background: #fff;
+  cursor: pointer;
+}
+
+.amount-section p {
+  font-size: 1.1rem;
+  font-weight: bold;
+  color: #444;
+}
+
+.input-section input {
+  width: 30%;
+  padding: 10px;
+  font-size: 14px;
+  border: 2px solid #ccc;
+  border-radius: 5px;
+  outline: none;
+  transition: all 0.3s ease-in-out;
+}
+
+.input-section input:focus {
+  border-color: #ffe70c;
+  box-shadow: 0 0 5px rgba(230, 217, 74, 0.5);
+}
+
+.input-section div {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.input-section h4 {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+/* Slots Container */
+.slots-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+  gap: 12px;
+  justify-content: stretch;
+  align-items: center;
+  margin-top: 15px;
+  max-width: 100%;
+  padding: 0 10px;
+}
+
+/* Slot Button */
+.slot-button {
+  padding: 10px;
+  font-size: 16px;
+  font-weight: 600;
+  border: 2px solid #ffe70c;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  text-align: center;
+  width: 100%;
+  box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.2);
+}
+
+.slot-button.available {
+  background-color: #fff;
+  color: rgb(0, 0, 0);
+}
+
+.slot-button.booked {
+  background-color: #FF4C4C;
+  color: white;
+  cursor: not-allowed;
+  opacity: 0.7;
+}
+
+.slots-section h4 {
+  font-size: 18px;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.features-section p strong {
+  font-size: 18px;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.features-content {
+  font-size: 16px;
+  font-weight: normal;
+  color: #333;
+}
+
+.date-picker {
+  width: 100%;
+  max-width: 250px;
+  padding: 10px;
+  font-size: 16px;
+  border: 2px solid #ababab;
+  border-radius: 8px;
+  outline: none;
+  transition: all 0.3s ease-in-out;
+  background: white;
+  color: #333;
+  cursor: pointer;
+}
+
+.date-picker::-webkit-calendar-picker-indicator {
+  filter: invert(40%);
+  cursor: pointer;
+}
+
+.popup-message {
+  position: absolute;
+  background-color: #ffcccb;
+  color: black;
+  padding: 10px;
+  border-radius: 5px;
+  font-weight: bold;
+  top: -40px;
+  left: 50%;
+  transform: translateX(-50%);
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.sample-input-container {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 5px;
+}
+
+.sample-input {
+  width: 113px;
+  padding: 5px;
+  border: 2px solid #ffe70c;
+  border-radius: 5px;
+  outline: none;
+  text-align: center;
+  font-size: 16px;
+  transition: border-color 0.3s;
+}
+
+.book-button-container {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.book-instrument-btn {
+  background-color: #ffcc00;
+  color: white;
+  border: none;
+  cursor: pointer;
+  transition: background 0.3s ease;
+  border-radius: 8px;
+  padding: 12px 20px;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.book-instrument-btn:hover {
+  background-color: #e9d92a;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+  transform: scale(1.03);
+}
+
+.error-message {
+  color: red;
+  font-weight: bold;
+  text-align: center;
+  margin-top: 20px;
+}
+
+.element-checkboxes {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.element-checkboxes label {
+  display: flex;
+  align-items: center;
+  background: #f9f9f9;
+  padding: 8px 12px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.element-checkboxes input[type="checkbox"] {
+  margin-right: 8px;
+  transform: scale(1.2);
+}
+
+.element-checkboxes label:hover {
+  background: #e6e6e6;
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+  .instrument-details-container {
+    padding: 15px;
+    gap: 15px;
+  }
+  
+  .instrument-image {
+    max-width: 300px;
+  }
+  
+  .details-section {
+    padding: 15px;
+  }
+}
+
+@media (max-width: 992px) {
+  .name-section {
+    font-size: 1.5rem;
+  }
+  
+  .details-section h2 {
+    font-size: 1.8rem;
+  }
+  
+  .amount-section select {
+    width: 70%;
+  }
+  
+  .input-section input {
+    width: 40%;
+  }
+}
+
+@media (max-width: 768px) {
+  .instrument-details-container {
+    grid-template-columns: 1fr;
+  }
+
+  .image-section {
+    margin-bottom: 20px;
+  }
+  
+  .amount-section select {
+    width: 60%;
+  }
+  
+  .date-picker {
+    font-size: 14px;
+    padding: 8px;
+  }
+  
+  .slots-container {
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  }
+}
+
+@media (max-width: 576px) {
+  .instrument-details-container {
+    padding: 10px;
+  }
+  
+  .name-section {
+    font-size: 1.3rem;
+  }
+  
+  .details-section h2 {
+    font-size: 1.5rem;
+  }
+  
+  .amount-section select {
+    width: 100%;
+  }
+  
+  .input-section input {
+    width: 60%;
+  }
+  
+  .slots-container {
+    grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
+  }
+  
+  .slot-button {
+    font-size: 0.9rem;
+    padding: 8px;
+  }
+  
+  .book-instrument-btn {
+    padding: 10px 15px;
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 400px) {
+  .name-section {
+    font-size: 1.2rem;
+  }
+  
+  .details-section h2 {
+    font-size: 1.3rem;
+  }
+  
+  .input-section input {
+    width: 80%;
+  }
+  
+  .element-checkboxes {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .sample-input {
+    width: 100px;
+  }
+}

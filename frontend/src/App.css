@@ -1,0 +1,35 @@
+/* Optimized font import */
+@import url('https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@300;400;500;600;700&family=Exo:wght@400;500;600&family=Playfair+Display:wght@400;600;700&display=swap');
+
+/* Base styles */
+body {
+  font-family: 'Chakra Petch', -apple-system, BlinkMacSystemFont, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-weight: 400;
+  margin: 0;
+  padding: 0;
+}
+
+/* Headings */
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Chakra Petch', Georgia, serif;
+  font-weight: 600;
+  margin: 0.5em 0;
+}
+
+/* Buttons and tech elements */
+button, .btn, code, .tech-text {
+  font-family: 'Chakra Petch', 'Courier New', monospace;
+  font-weight: 500;
+}
+
+/* Forms */
+input, textarea, select {
+  font-family: 'Chakra Petch', sans-serif;
+}
+
+/* Utility classes */
+.font-exo { font-family: 'Exo', sans-serif; }
+.font-playfair { font-family: 'Playfair Display', serif; }
+.font-chakra { font-family: 'Chakra Petch', monospace; }

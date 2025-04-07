@@ -1,0 +1,448 @@
+/* General Page Styling */
+.page-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  color: #333;
+}
+
+.page-title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #631104;
+  text-align: center;
+  margin-bottom: 30px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  text-shadow: 2px 2px 4px rgba(139, 139, 139, 0.3);
+}
+
+/* Main Status Container */
+.status-main-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 20px;
+}
+
+/* Left Container: Enter Booking ID */
+.status-container {
+  width: 48%;
+  background: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Right Container: View Results */
+.view-results-container {
+  width: 48%;
+  background: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.view-results-label {
+  text-decoration: underline #ffea00;
+  text-underline-offset: 8px;
+  text-decoration-thickness: 3px;
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #631104;
+  margin-bottom: 40px;
+  display: block;
+}
+
+/* Staff Name */
+.staff-name {
+  font-size: 1.3rem;
+  color: #282828;
+  margin-top: 10px;
+}
+
+.staff-name strong {
+  color: #631104;
+}
+
+/* Report Download */
+.report-download {
+  color: #631104;
+  font-size: 1.3rem;
+  margin-top: 10px;
+  margin-bottom: 23px;
+}
+
+.download-link {
+  font-size: 1.1rem;
+  text-decoration: underline;
+  color: #007bff;
+  font-weight: bold;
+}
+
+.download-link:hover {
+  text-decoration: underline;
+}
+
+
+
+/* Input Section */
+.input-section {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.input-group {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.input-group label {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #631104;
+  margin-bottom: 10px;
+}
+
+.input-group input {
+  width: 40%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1rem;
+  transition: border-color 0.3s ease;
+}
+
+.input-group input:focus {
+  border-color: #631104;
+  outline: none;
+}
+
+.status-btn  {
+  padding: 10px 20px;
+  background: #631104;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.status-btn:hover {
+  background: #c61100;
+}
+
+/* Status Display */
+.status-display {
+  padding: 10px;
+  border-radius: 5px;
+  text-align: center;
+  font-weight: bold;
+  margin-top: 20px;
+  animation: fadeIn 0.5s ease;
+}
+
+.status-pending {
+  background: #fff3cd;
+  color: #856404;
+}
+
+.status-completed {
+  background: #e7d0f4;
+  color: #9008de;
+}
+
+.status-rejected {
+  background: #f8d7da;
+  color: #ff0000;
+}
+
+.status-accepted {
+  background: #d4edda;
+  color: #155724;
+}
+
+/* Error Message */
+.error-message {
+  color: #721c24;
+  background: #f8d7da;
+  padding: 10px;
+  border-radius: 5px;
+  text-align: center;
+  margin-top: 20px;
+  animation: fadeIn 0.5s ease;
+}
+
+/* Booking Details Section */
+.booking-details-wrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding-top: 20px;
+}
+
+.booking-details {
+  max-width: 80%;
+  background: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  animation: slideIn 0.5s ease;
+}
+
+.booking-details h3 {
+  text-decoration: underline #ffea00;
+  text-underline-offset: 8px;
+  font-size: 1.8rem;
+  color: #3a644f;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.booking-details p {
+  font-size: 1.3rem;
+  margin: 10px 0;
+  line-height: 1.6;
+}
+
+.booking-details strong {
+  color: #631104;
+}
+
+/* Guide Approval Letter Iframe */
+iframe {
+  margin-top: 10px;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.back-icon {
+  position: absolute;
+  left: 0;
+  width: 50px;
+  height: 50px;
+  cursor: pointer;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+  padding-left: 25px;
+ 
+}
+
+.back-icon:hover {
+  opacity: 0.8;
+  transform: scale(1.1);
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+      opacity: 0;
+  }
+  to {
+      opacity: 1;
+  }
+}
+
+@keyframes slideIn {
+  from {
+      transform: translateY(20px);
+      opacity: 0;
+  }
+  to {
+      transform: translateY(0);
+      opacity: 1;
+  }
+}
+
+/* Enhanced Responsive Design */
+@media (max-width: 1200px) {
+  .page-container {
+      padding: 20px 15px;
+  }
+  
+  .page-title {
+      font-size: 2.3rem;
+  }
+  
+  .input-group label {
+      font-size: 1.4rem;
+  }
+  
+  .booking-details h3 {
+      font-size: 1.7rem;
+  }
+  
+  .booking-details p {
+      font-size: 1.2rem;
+  }
+}
+
+@media (max-width: 992px) {
+  .page-title {
+      font-size: 2.1rem;
+  }
+  
+  .status-container,
+  .view-results-container {
+      padding: 18px;
+  }
+  
+  .view-results-label,
+  .input-group label {
+      font-size: 1.3rem;
+  }
+  
+  .staff-name,
+  .report-download {
+      font-size: 1.2rem;
+  }
+  
+  .booking-details {
+      max-width: 90%;
+  }
+}
+
+@media (max-width: 900px) {
+  .input-group input {
+      width: 50%;
+  }
+  
+  .booking-details h3 {
+      font-size: 1.6rem;
+  }
+  
+  .booking-details p {
+      font-size: 1.1rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .status-main-container {
+      flex-direction: column;
+  }
+
+  .status-container,
+  .view-results-container {
+      width: 100%;
+  }
+
+  .booking-details-wrapper {
+      padding: 10px;
+  }
+
+  .booking-details {
+      max-width: 100%;
+  }
+  
+  .page-title {
+      font-size: 1.9rem;
+  }
+  
+  .input-section {
+      flex-direction: column;
+      align-items: flex-start;
+  }
+  
+  .input-group input {
+      width: 100%;
+  }
+  
+  button {
+      width: 100%;
+  }
+}
+
+@media (max-width: 600px) {
+  .page-title {
+      font-size: 1.7rem;
+  }
+  
+  .view-results-label,
+  .input-group label {
+      font-size: 1.2rem;
+  }
+  
+  .booking-details h3 {
+      font-size: 1.4rem;
+  }
+  
+  .booking-details p {
+      font-size: 1rem;
+  }
+  
+  .download-link {
+      font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .page-container {
+      padding: 15px 10px;
+  }
+  
+  .page-title {
+      font-size: 1.5rem;
+      margin-bottom: 20px;
+  }
+  
+  .status-container,
+  .view-results-container {
+      padding: 15px;
+  }
+  
+  .view-results-label,
+  .input-group label {
+      font-size: 1.1rem;
+  }
+  
+  .staff-name,
+  .report-download {
+      font-size: 1.1rem;
+  }
+  
+  .booking-details h3 {
+      font-size: 1.3rem;
+  }
+  
+  .booking-details {
+      padding: 15px;
+  }
+}
+
+@media (max-width: 360px) {
+  .page-title {
+      font-size: 1.4rem;
+  }
+  
+  .view-results-label,
+  .input-group label {
+      font-size: 1rem;
+  }
+  
+  .input-group input {
+      padding: 8px;
+  }
+  
+  button {
+      padding: 8px;
+      font-size: 0.9rem;
+  }
+  
+  .status-display,
+  .error-message {
+      font-size: 0.9rem;
+  }
+  
+  .booking-details h3 {
+      font-size: 1.2rem;
+  }
+  
+  .booking-details p {
+      font-size: 0.9rem;
+  }
+}

@@ -1,0 +1,303 @@
+/* Parent Container */
+.instrument-update-container {
+  max-width: 50%;
+  margin: 30px auto;
+  padding: 20px;
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+/* Title */
+.instrument-update-container .instrument-update-title {
+  text-align: center;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.instrument-update-container .apform-group label {
+  display: inline-block;
+  font-weight: bold;
+  margin-bottom: 0;
+  margin-right: 50px;
+  width: 180px; 
+  color: #555;
+  font-size: 18px;
+}
+
+/* Labels */
+.instrument-update-container .apform-group label {
+  display: inline-block;
+  font-weight: bold;
+  margin-bottom: 0;
+  margin-right: 50px;
+  width: 180px; 
+  color: #555;
+  font-size: 18px;
+}
+
+/* Input Fields */
+.instrument-update-container .instrument-update-input,
+.instrument-update-container .apform-group input[type="text"],
+.instrument-update-container .apform-group input[type="number"],
+.instrument-update-container .apform-group textarea,
+.instrument-update-container .apform-group input[type="date"] {
+  width: 50%;
+  padding: 12px;
+  font-size: 16px;
+  border: 1px solid #b1aeae;
+  border-radius: 8px;
+  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.instrument-update-container .instrument-update-input:focus,
+.instrument-update-container .apform-group input:focus,
+.instrument-update-container .apform-group textarea:focus {
+  border-color: #ffcc00;
+  box-shadow: 0 0 4px rgba(255, 204, 0, 0.5);
+  outline: none;
+}
+
+/* Amount Container */
+.instrument-update-container .amount-container {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-top: 8px;
+  margin-bottom: 12px;
+}
+
+/* Buttons */
+.instrument-update-container button {
+  background-color: #ffcc00;
+  color: white;
+  border: none;
+  padding: 6px 10px;
+  font-weight: bold;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s ease;
+}
+
+.instrument-update-container button:hover {
+  background-color: #ffb400;
+  transform: translateY(-2px);
+}
+
+.instrument-update-container button:active {
+  transform: translateY(0);
+}
+
+/* Remove Button */
+.instrument-update-container button.remove-button {
+  background-color: #ff4d4d;
+}
+
+.instrument-update-container button.remove-button:hover {
+  background-color: #e63e3e;
+}
+
+/* Checkbox */
+.instrument-update-container .apform-group input[type="checkbox"] {
+  width: 16px;
+  height: 16px;
+  margin-left: 8px;
+}
+
+/* Image Upload */
+.instrument-update-container .image-upload-input {
+  border: none;
+}
+
+.instrument-update-container .image-preview {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 8px;
+}
+
+.instrument-update-container .image-preview img {
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  object-fit: cover;
+}
+
+/* Error and Success Messages */
+.instrument-update-container .error-message {
+  color: red;
+  margin-top: 8px;
+  text-align: center;
+}
+
+.instrument-update-container .success-message {
+  color: green;
+  margin-top: 8px;
+  text-align: center;
+}
+
+/* Update Button */
+.instrument-update-container .update-button {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  margin-top: 15px;
+  text-align: center;
+  background-color: #ffcc00;
+}
+
+.instrument-update-container .update-button:hover {
+  background-color: #ffb400;
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+  .instrument-update-container {
+    max-width: 60%;
+  }
+  
+  .instrument-update-container .apform-group label {
+    width: 160px;
+    margin-right: 40px;
+  }
+  
+  .instrument-update-container .instrument-update-input,
+  .instrument-update-container .apform-group input[type="text"],
+  .instrument-update-container .apform-group input[type="number"],
+  .instrument-update-container .apform-group textarea,
+  .instrument-update-container .apform-group input[type="date"] {
+    width: 55%;
+  }
+}
+
+@media (max-width: 992px) {
+  .instrument-update-container {
+    max-width: 70%;
+  }
+  
+  .instrument-update-container .instrument-update-title {
+    font-size: 1.5rem;
+  }
+  
+  .instrument-update-container .apform-group label {
+    font-size: 16px;
+    width: 140px;
+    margin-right: 30px;
+  }
+  
+  .instrument-update-container .instrument-update-input,
+  .instrument-update-container .apform-group input[type="text"],
+  .instrument-update-container .apform-group input[type="number"],
+  .instrument-update-container .apform-group textarea,
+  .instrument-update-container .apform-group input[type="date"] {
+    width: 60%;
+    padding: 10px;
+    font-size: 15px;
+  }
+}
+
+@media (max-width: 768px) {
+  .instrument-update-container {
+    max-width: 80%;
+    padding: 15px;
+  }
+
+  .instrument-update-container .apform-group {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .instrument-update-container .apform-group label {
+    width: 100%;
+    text-align: left;
+    margin-bottom: 5px;
+    margin-right: 0;
+  }
+
+  .instrument-update-container .instrument-update-input,
+  .instrument-update-container .apform-group input[type="text"],
+  .instrument-update-container .apform-group input[type="number"],
+  .instrument-update-container .apform-group textarea,
+  .instrument-update-container .apform-group input[type="date"] {
+    width: 100%;
+  }
+
+  .instrument-update-container .amount-container,
+  .instrument-update-container .image-preview {
+    margin-left: 0;
+  }
+
+  .instrument-update-container .update-button {
+    padding: 8px;
+  }
+}
+
+@media (max-width: 576px) {
+  .instrument-update-container {
+    max-width: 90%;
+    padding: 12px;
+    margin: 20px auto;
+  }
+  
+  .instrument-update-container .instrument-update-title {
+    font-size: 1.3rem;
+    margin-bottom: 15px;
+  }
+  
+  .instrument-update-container .apform-group label {
+    font-size: 15px;
+  }
+  
+  .instrument-update-container button {
+    padding: 5px 8px;
+    font-size: 14px;
+  }
+  
+  .instrument-update-container .update-button {
+    padding: 7px;
+    font-size: 15px;
+  }
+}
+
+@media (max-width: 400px) {
+  .instrument-update-container {
+    max-width: 95%;
+    padding: 10px;
+  }
+  
+  .instrument-update-container .instrument-update-title {
+    font-size: 1.2rem;
+  }
+  
+  .instrument-update-container .apform-group label {
+    font-size: 14px;
+  }
+  
+  .instrument-update-container .instrument-update-input,
+  .instrument-update-container .apform-group input[type="text"],
+  .instrument-update-container .apform-group input[type="number"],
+  .instrument-update-container .apform-group textarea,
+  .instrument-update-container .apform-group input[type="date"] {
+    padding: 8px;
+    font-size: 14px;
+  }
+  
+  .instrument-update-container .update-button {
+    padding: 6px;
+    font-size: 14px;
+  }
+}
+
+/* Fade-in Animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

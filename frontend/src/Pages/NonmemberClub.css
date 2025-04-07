@@ -1,0 +1,300 @@
+/* Styles for NonMemberClub Page */
+.nonmemberclub-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  flex-direction: column;
+  position: relative;
+}
+
+.nonclub-content h1 {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  font-size: 30px;
+  color: #2d2d2d;
+  text-align: left;
+  font-weight: bold;
+  z-index: 10;
+  margin: 0;
+}
+
+/* Styles for Instrument List */
+.noninstrument-list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 90px;
+  justify-content: center;
+  margin-top: 80px;
+  padding: 20px;
+  transition: transform 0.2s ease-in-out;
+}
+
+.noninstrument-item {
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  overflow: hidden;
+  text-align: center;
+  transition: transform 0.3s, box-shadow 0.3s;
+  width: 100%;
+  max-width: 350px;
+  margin: 0 auto;
+}
+
+.noninstrument-item:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.noninstrument-image {
+  width: 70%;
+  height: 120px;
+  object-fit: cover;
+  margin: 10px auto;
+  border: 4px solid #ffcc00;
+  border-radius: 6px;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+}
+
+.noninstrument-name {
+  font-size: 18px;
+  font-weight: bold;
+  margin: 10px 0;
+  color: #333;
+}
+
+/* Positioning the Member Section at the Top Right */
+.nonmember-header {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+/* Styling for the <p> inside .nonmember-header */
+.nonmember-header p {
+  font-size: 18px;
+  margin: 0;
+  color: black;
+}
+
+/* Styling the Yellow Button with Curved Edges */
+.yellow-btn {
+  background-color: #ffe70c;
+  color: black;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 25px;
+  font-weight: bold;
+}
+
+.yellow-btn:hover {
+  background-color: gold;
+}
+
+/* Enhanced Responsive Design */
+@media (max-width: 1200px) {
+  .noninstrument-list {
+      gap: 70px;
+  }
+  
+  .noninstrument-item {
+      max-width: 300px;
+  }
+  
+  .noninstrument-image {
+      height: 110px;
+  }
+  
+  .nonclub-content h1 {
+      font-size: 28px;
+  }
+  
+  .nonmember-header p {
+      font-size: 17px;
+  }
+  
+  .yellow-btn {
+      padding: 9px 18px;
+      font-size: 15px;
+  }
+}
+
+@media (max-width: 992px) {
+  .noninstrument-list {
+      gap: 50px;
+  }
+  
+  .noninstrument-item {
+      max-width: 280px;
+  }
+  
+  .noninstrument-image {
+      height: 100px;
+      width: 65%;
+  }
+  
+  .noninstrument-name {
+      font-size: 17px;
+  }
+  
+  .nonclub-content h1 {
+      font-size: 26px;
+  }
+  
+  .nonmember-header {
+      gap: 8px;
+  }
+  
+  .yellow-btn {
+      padding: 8px 16px;
+  }
+}
+
+@media (max-width: 768px) {
+  .noninstrument-list {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 40px;
+  }
+
+  .noninstrument-item {
+      width: 90%;
+      max-width: none;
+  }
+
+  .noninstrument-image {
+      height: 100px;
+  }
+
+  .noninstrument-name {
+      font-size: 16px;
+  }
+  
+  .nonclub-content h1 {
+      font-size: 24px;
+      top: 15px;
+      left: 15px;
+  }
+  
+  .nonmember-header {
+      top: 15px;
+      right: 15px;
+  }
+  
+  .nonmember-header p {
+      font-size: 16px;
+  }
+  
+  .yellow-btn {
+      padding: 7px 14px;
+      font-size: 14px;
+  }
+}
+
+@media (max-width: 576px) {
+  .noninstrument-list {
+      grid-template-columns: 1fr;
+      gap: 30px;
+      margin-top: 70px;
+      padding: 15px;
+  }
+
+  .noninstrument-item {
+      width: 100%;
+      max-width: 280px;
+  }
+
+  .noninstrument-image {
+      height: 90px;
+  }
+
+  .noninstrument-name {
+      font-size: 15px;
+  }
+  
+  .nonclub-content h1 {
+      font-size: 22px;
+  }
+  
+  .nonmember-header {
+      flex-direction: column;
+      align-items: flex-end;
+      gap: 5px;
+  }
+  
+  .yellow-btn {
+      padding: 6px 12px;
+      font-size: 13px;
+  }
+}
+
+@media (max-width: 480px) {
+  .noninstrument-list {
+      gap: 25px;
+  }
+  
+  .noninstrument-item {
+      max-width: 250px;
+  }
+  
+  .noninstrument-image {
+      height: 80px;
+      width: 60%;
+  }
+  
+  .noninstrument-name {
+      font-size: 14px;
+  }
+  
+  .nonclub-content h1 {
+      font-size: 20px;
+      top: 10px;
+      left: 10px;
+  }
+  
+  .nonmember-header {
+      top: 10px;
+      right: 10px;
+  }
+  
+  .nonmember-header p {
+      font-size: 14px;
+  }
+  
+  .yellow-btn {
+      padding: 5px 10px;
+      font-size: 12px;
+  }
+}
+
+@media (max-width: 360px) {
+  .noninstrument-list {
+      padding: 10px;
+      gap: 20px;
+  }
+  
+  .noninstrument-item {
+      max-width: 220px;
+  }
+  
+  .noninstrument-image {
+      height: 70px;
+  }
+  
+  .nonclub-content h1 {
+      font-size: 18px;
+  }
+  
+  .nonmember-header p {
+      font-size: 13px;
+  }
+  
+  .yellow-btn {
+      font-size: 11px;
+  }
+}

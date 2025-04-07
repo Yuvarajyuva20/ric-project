@@ -1,0 +1,247 @@
+/* Homepage.css */
+body {
+  margin: 0;
+  padding: 0;
+  background: #ece5da;
+  color: #333333;
+  overflow-x: hidden;
+}
+
+.contents {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  padding: 0 5%;
+}
+
+.banners {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: flex-start; /* Changed from center to flex-start to move content up */
+  margin-top: -5%; /* Pulls the entire content up */
+}
+
+.text-content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-top: 10%;
+  flex: 1;
+  max-width: 50%;
+  padding-left: 6%; /* Moves left content slightly to the right */
+  transform: translateY(-20px); /* Moves left content up */
+}
+
+.image-container {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+  transform: translateY(-20px); /* Moves right image up */
+}
+
+.right-image {
+  max-width: 108%;
+
+  height: auto;
+  object-fit: contain;
+  margin-right: 5%; /* Adds some space from the right edge */
+}
+
+/* Add to your Homepage.css */
+.bottom-quote {
+  margin-top: 40px;
+  padding: 15px 30px;
+  display: inline-block;
+  background: linear-gradient(to right, #e5fffa, #ece5da);
+  color: #431612;
+  font-size: 20px;
+  font-weight: 500;
+  border-radius: 10px;
+  position: relative;
+  overflow: hidden;
+}
+
+.bottom-quote::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 0;
+}
+
+.bottom-quote span {
+  position: relative;
+  z-index: 1;
+}
+
+.cursor {
+  animation: blink 0.7s infinite;
+  color: #e5cf2a;
+  position: relative;
+  z-index: 1;
+}
+
+@keyframes blink {
+  0% { opacity: 1; }
+  50% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+
+
+/* Rest of your existing styles... */
+/* Button styling */
+#m-btn {
+  width: 280px;
+  padding: 8px 10px;
+  color: #e5cf2a;
+  border: 2px solid #e5cf2a;
+  border-radius: 50px;
+  font-size: 28px;
+  transition: background-color 0.3s, transform 0.2s;
+  margin-top: 60px;
+  font-weight: 600;
+  letter-spacing: 1.2px;
+  cursor: pointer;
+  background: radial-gradient(circle, #ffffff 40%, #e5cf2a 100%);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Hover effect */
+#m-btn:hover {
+  background: radial-gradient(circle, #ffffff 40%, #e5cf2a 90%);
+  transform: scale(1.05);
+}
+
+.banners h1 {
+  color: #431612;
+  font-size: 50px;
+  font-weight: bold;
+  text-align: left;
+  margin: 0;
+}
+
+.banners h1 span {
+  display: block;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: slideUpFadeIn 1.5s ease-out forwards;
+}
+
+.banners h1 span:nth-child(1) {
+  animation-delay: 0s;
+}
+
+.banners h1 span:nth-child(2) {
+  color: #e5cf2a;
+  animation-delay: 0.5s;
+}
+
+.banners h1 span:nth-child(3) {
+  animation-delay: 1s;
+}
+
+.banners h1 span:nth-child(4) {
+  animation-delay: 1.5s;
+}
+
+@keyframes slideUpFadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+  .banners h1 {
+    font-size: 40px;
+  }
+  
+  #m-btn {
+    font-size: 26px;
+    width: 240px;
+  }
+}
+
+@media (max-width: 992px) {
+  .banners {
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .text-content {
+    max-width: 100%;
+    margin-bottom: 40px;
+    text-align: center;
+  }
+  
+  .banners h1 {
+    text-align: center;
+    font-size: 36px;
+  }
+  
+  .banners h1 span {
+    display: inline;
+    margin-right: 10px;
+  }
+  
+  .image-container {
+    justify-content: center;
+  }
+  
+  .right-image {
+    max-width: 100%;
+  }
+  
+  #m-btn {
+    font-size: 24px;
+    width: 220px;
+    margin: 30px auto 0;
+  }
+}
+
+@media (max-width: 768px) {
+  .banners h1 {
+    font-size: 30px;
+  }
+  
+  #m-btn {
+    font-size: 22px;
+    width: 200px;
+  }
+}
+
+@media (max-width: 576px) {
+  .banners h1 {
+    font-size: 26px;
+  }
+  
+  #m-btn {
+    font-size: 20px;
+    width: 180px;
+  }
+  
+  .banners h1 span {
+    display: block;
+    margin-right: 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .banners h1 {
+    font-size: 22px;
+  }
+  
+  #m-btn {
+    font-size: 18px;
+    width: 160px;
+  }
+}

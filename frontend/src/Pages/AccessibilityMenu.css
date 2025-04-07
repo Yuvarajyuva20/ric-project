@@ -1,0 +1,755 @@
+.accessibility-menu {
+  position: absolute;
+  background: #ffffff;
+  border-radius: 20px; /* More curved edges */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  width: 300px;
+  z-index: 1000;
+  display: flex;
+  flex-direction: column;
+  max-height: 450px; /* Increased height */
+  overflow: hidden; /* Ensures content doesn't overflow */
+}
+
+.accessibility-menu-content {
+  flex: 1;
+  padding: 15px;
+  overflow-y: auto; /* Keeps content scrollable */
+}
+
+.accessibility-menu-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 15px;
+  background: #ffffff; /* Dark background for contrast */
+  border-bottom: 2px solid #ffcc00; /* Golden accent */
+  border-radius: 8px 8px 0 0; /* Smooth rounded top */
+}
+
+.menu-title h2 {
+  font-size: 18px;
+  font-weight: 600;
+  margin: 0;
+  color: #ffffff; /* White text */
+  text-align: left;
+  text-decoration: none; /* Removes any underline */
+
+}
+
+.close-button {
+  width: 30px;  /* Circular shape */
+  height: 30px;
+  background: #ffcc00; /* Yellow background */
+  border: none;
+  border-radius: 50%; /* Makes it circular */
+  font-size: 18px;
+  font-weight: bold;
+  color: #2d2d2d; /* Dark icon color */
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.close-button:hover {
+  background: #ffb300; /* Slightly darker yellow */
+  transform: scale(1.1); /* Slight zoom effect */
+}
+
+
+
+.accessibility-menu-footer {
+  padding: 10px 15px;
+  background: #f9f9f9;
+  border-top: 1px solid #e0e0e0;
+  display: flex;
+  justify-content: space-between;
+  border-bottom-left-radius: 20px; /* Matches menu's bottom curve */
+  border-bottom-right-radius: 20px; /* Matches menu's bottom curve */
+}
+
+.accessibility-menu-content::-webkit-scrollbar {
+  width: 8px;
+}
+
+.accessibility-menu-content::-webkit-scrollbar-thumb {
+  background: #ccc;
+  border-radius: 4px;
+}
+
+
+
+.accessibility-menu::-webkit-scrollbar-thumb:hover {
+  background: #aaa;
+}
+
+.accessibility-menu:active {
+  cursor: grabbing; /* Indicate dragging */
+}
+
+.accessibility-menu h2 {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: #2d2d2d;
+}
+
+.accessibility-menu p {
+  font-weight: bold;
+  font-size: 16px;
+  margin-bottom: 15px;
+  color: #444;
+}
+
+.section-divider {
+  border: none;
+  border-top: 1px solid #e0e0e0;
+  margin: 15px 0;
+}
+
+.accessibility-options,
+.readable-experience-options,
+.visually-pleasing-options {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.visually-pleasing-option,
+.accessibility-option,
+.readable-experience-option {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px;
+  background: #f7f7f7;
+  border-radius: 5px;
+}
+
+.accessibility-option:last-child,
+.readable-experience-option:last-child,
+.visually-pleasing-option:last-child
+ {
+  border-bottom: none;
+}
+
+.toggle-label {
+  font-size: 14px;
+  color: #555;
+  font-weight: 500;
+}
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 40px;
+  height: 20px;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  transition: 0.4s;
+  border-radius: 20px;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 14px;
+  width: 14px;
+  left: 3px;
+  bottom: 3px;
+  background-color: white;
+  transition: 0.4s;
+  border-radius: 50%;
+}
+
+input:checked + .slider {
+  background-color: #2196f3;
+}
+
+input:checked + .slider:before {
+  transform: translateX(20px);
+}
+
+.accessibility-actions {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 15px;
+}
+
+.reset-button,
+.hide-button {
+  background: #fdd835;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 15px;
+  font-size: 14px;
+  font-weight: bold;
+  color: #fff;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.reset-button:hover {
+  background: #f9a825;
+}
+
+.hide-button {
+  background: #ff5722;
+}
+
+.hide-button:hover {
+  background: #e64a19;
+}
+
+/* Epilepsy Safe Mode: Dampens colors and disables animations */
+body.epilepsy-safe-mode {
+  background-color: #f4f4f4 !important;
+  filter: grayscale(60%) contrast(90%);
+  animation: none !important;
+  transition: none !important;
+}
+
+.epilepsy-safe-mode * {
+  animation: none !important;
+  transition: none !important;
+  color: #848484 !important;
+}
+
+.epilepsy-safe-mode img,
+.epilepsy-safe-mode video {
+  filter: grayscale(80%) !important;
+}
+
+.epilepsy-safe-mode .flashing {
+  animation: none !important;
+}
+
+/* Visually Impaired Mode: Increases font size, contrast, spacing, and saturation */
+body.visually-impaired-mode {
+  font-size: 18px !important; /* Increase text size */
+  line-height: 1.6 !important; /* Increase line height for better readability */
+  background-color: #f9f9f9 !important; /* Bright background for contrast */
+  color: #333333 !important; /* Dark text for better contrast */
+  filter: saturate(2); /* Increase saturation for better visibility */
+}
+
+
+
+.visually-impaired-mode h1,
+.visually-impaired-mode h2,
+.visually-impaired-mode h3,
+.visually-impaired-mode h4,
+.visually-impaired-mode h5,
+.visually-impaired-mode h6 {
+  font-size: 1.5em !important; /* Larger headings */
+}
+
+.visually-impaired-mode p,
+.visually-impaired-mode .toggle-label {
+  font-size: 1.2em !important; /* Larger paragraph text */
+}
+
+.visually-impaired-mode .accessibility-option {
+  padding: 15px 0 !important; /* Increase padding for easier selection */
+}
+
+.visually-impaired-mode .accessibility-menu {
+  background-color: #f9f9f9 !important; /* Ensure menu background is bright */
+  border: 2px solid #333 !important; /* Dark border for better visibility */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3) !important; /* Strong shadow for better separation */
+}
+
+
+/* Cognitive Disability Mode: Adds a border around content */
+body.cognitive-disability-mode * {
+  border: 2px solid #000 !important; /* Black rectangular border */
+  padding: 5px !important; /* Extra spacing for readability */
+}
+
+/* Dark overlay for entire page */
+.reading-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+ 
+  pointer-events: none;
+  z-index: 9998;
+}
+
+/* Transparent reading strip */
+.reading-mask {
+  position: fixed;
+  left: 0;
+  width: 100%;
+  height: 80px; /* Adjust height for comfort */
+  background: rgba(0, 0, 0, 0); /* Fully transparent */
+  box-shadow: 0 0 0 2000px rgba(0, 0, 0, 0.7); /* Creates the surrounding dark area */
+  pointer-events: none;
+  z-index: 9999;
+  transition: top 0.1s ease-out;
+}
+
+
+/* Blindness Mode: Optimizes the website for screen readers */
+body.blindness-mode {
+  outline: none !important;
+  scroll-behavior: auto !important; /* Prevents smooth scrolling, which can interfere with screen readers */
+}
+
+/* Hide non-essential animations and media */
+body.blindness-mode * {
+  animation: none !important;
+  transition: none !important;
+}
+
+/* Blindness Mode: Remove all stylish fonts */
+body.blindness-mode {
+  font-family: 'Arial', sans-serif !important; /* Replace all fonts with Arial */
+  font-weight: normal !important; /* Ensures no bold or italic effects */
+  text-transform: none !important; /* Prevents any text transformations */
+  letter-spacing: normal !important; /* Default spacing */
+  word-spacing: normal !important; /* Default word spacing */
+}
+
+/* Override Chakra Petch specifically */
+body.blindness-mode, 
+body.blindness-mode * {
+  font-family: Arial, sans-serif !important;
+}
+
+@font-face {
+  font-family: 'Chakra Petch';
+  src: local('Arial'); /* Replacing Chakra Petch with Arial */
+}
+
+
+/* Content Scaling Section */
+.scaling-box {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #f0f0f0;
+  padding: 8px 12px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  width: 220px;
+  margin-top: 10px;
+}
+
+.scaling-text {
+  font-size: 14px;
+  font-weight: bold;
+  flex-grow: 1;
+  text-align: center;
+}
+
+.scale-button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 6px 12px;
+  font-size: 16px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.scale-button:hover {
+  background-color: #0056b3;
+}
+
+.scale-percentage {
+  text-align: center;
+  font-size: 14px;
+  font-weight: bold;
+  margin-top: 5px;
+}
+
+
+ 
+/* Dyslexia Friendly Mode */
+body.dyslexia-friendly-mode {
+  font-family: 'OpenDyslexic', Arial, sans-serif !important;
+  background-color: #FAF3E0 !important; /* Light background for comfort */
+  letter-spacing: 0.05em !important; /* Improves readability */
+  line-height: 1.8 !important;
+}
+
+/* Apply font to all text */
+.dyslexia-friendly-mode h1,
+.dyslexia-friendly-mode h2,
+.dyslexia-friendly-mode h3,
+.dyslexia-friendly-mode h4,
+.dyslexia-friendly-mode h5,
+.dyslexia-friendly-mode h6,
+.dyslexia-friendly-mode p,
+.dyslexia-friendly-mode label {
+  font-family: 'OpenDyslexic', Arial, sans-serif !important;
+}
+
+/* Highlight links for better visibility */
+.dyslexia-friendly-mode a {
+  color: #2D82B7 !important;
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+/* Increase spacing for buttons */
+.dyslexia-friendly-mode button {
+  padding: 12px;
+  font-size: 16px !important;
+}
+
+/* Ensure accessibility menu itself is readable */
+.dyslexia-friendly-mode .accessibility-menu {
+  background-color: #FFF8DC !important;
+  border: 2px solid #555 !important;
+}
+
+@font-face {
+  font-family: 'OpenDyslexic';
+  src: url('https://raw.githubusercontent.com/antijingoist/open-dyslexic/master/ttf/OpenDyslexic-Regular.ttf') format('truetype');
+}
+
+.dyslexia-friendly-mode.body {
+  font-family: 'OpenDyslexic', Arial, sans-serif;
+}
+
+/* Magnifier Box */
+.text-magnifier-box {
+  position: fixed;
+  background-color: black;
+  color: white;
+  font-size: 22px; /* Bigger text */
+  font-weight: bold;
+  padding: 10px 15px;
+  border-radius: 5px;
+  pointer-events: none;
+  z-index: 10000;
+  white-space: nowrap;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
+  transform: translate(-50%, -50%);
+}
+
+/* Apply zoom effect to all readable elements */
+body.text-magnifier-mode p,
+body.text-magnifier-mode span,
+body.text-magnifier-mode h1,
+body.text-magnifier-mode h2,
+body.text-magnifier-mode h3,
+body.text-magnifier-mode h4,
+body.text-magnifier-mode h5,
+body.text-magnifier-mode h6,
+body.text-magnifier-mode li,
+body.text-magnifier-mode a {
+  cursor: zoom-in;
+}
+
+
+/* Highlight Links Mode: Changes the background and text color of links */
+body.highlight-links-mode a {
+  background-color: rgb(243, 243, 243) !important; /* Highlight background */
+  color: rgb(0, 0, 0) !important; /* Change text color for contrast */
+  font-weight: bold !important; /* Make text bold */
+  padding: 2px 4px; /* Add padding for visibility */
+  border-radius: 4px; /* Rounded corners for better aesthetics */
+  transition: all 0.2s ease-in-out;
+  border-color: #007bff;
+  outline: 3px solid #144fc6 !important;
+}
+
+/* Highlight Links Mode: Hover effect */
+body.highlight-links-mode a:hover {
+  background-color: rgb(221, 205, 31) !important;
+  color: rgb(0, 0, 0) !important; /* Change text color for contrast */
+}
+
+
+/* Center-aligns text inside its container without affecting layout */
+body.center-aligned-mode p,
+body.center-aligned-mode h1,
+body.center-aligned-mode h2,
+body.center-aligned-mode h3,
+body.center-aligned-mode h4,
+body.center-aligned-mode h5,
+body.center-aligned-mode h6,
+body.center-aligned-mode span,
+body.center-aligned-mode li,
+body.center-aligned-mode a {
+  display: inline-block; /* Prevents full-width text elements */
+  width: 100%; /* Ensures text stays inside its container */
+  text-align: center !important; /* Centers only text */
+}
+
+
+/* Readable Font Mode: Applies a clean, readable font with increased size */
+body.readable-font-mode {
+  font-family: 'Arial', 'Verdana', 'Tahoma', sans-serif !important;
+  font-size: 18px !important;  /* Increased font size */
+  letter-spacing: 0.5px !important;
+  line-height: 1.8 !important; /* More spacing between lines for readability */
+}
+
+
+/* Dark Contrast Mode: Enhances contrast with a dark theme */
+body.dark-contrast-mode {
+  filter: brightness(80%) contrast(180%) !important; /* Reduces brightness, boosts contrast */
+  background-color: #000000 !important; /* Pure black background */
+  color: #ffffff !important; /* White text for high contrast */
+}
+/* Ensure text remains highly readable */
+body.dark-contrast-mode h1,
+body.dark-contrast-mode h2,
+body.dark-contrast-mode h3,
+body.dark-contrast-mode p,
+body.dark-contrast-mode span {
+  color: #ffffff !important; /* Keep text white for strong contrast */
+  background-color: #000000 !important; /* Black background for readability */
+}
+
+
+/* Bright Contrast Mode: Increases brightness and contrast */
+body.bright-contrast-mode {
+  filter: brightness(120%) contrast(150%) !important; /* Boosts brightness and contrast */
+}
+/* Ensure text remains highly readable */
+body.bright-contrast-mode h1,
+body.bright-contrast-mode h2,
+body.bright-contrast-mode h3,
+body.bright-contrast-mode p,
+body.bright-contrast-mode span {
+  color: #000000 !important; /* Keep text black for strong contrast */
+  background-color: #ffffff !important; /* White background for readability */
+}
+
+
+/* High Saturation Mode: Increases saturation for all elements */
+body.high-saturation-mode {
+  filter: saturate(4) !important; /* Doubles color intensity */
+}
+/* Ensure text remains highly readable */
+body.high-saturation-mode h1,
+body.high-saturation-mode h2,
+body.high-saturation-mode h3,
+body.high-saturation-mode p,
+body.high-saturation-mode span {
+  color: #000000 !important; /* Keep text black for readability */
+}
+
+
+
+/* Low Saturation Mode: Reduces color intensity for all elements */
+body.low-saturation-mode {
+  filter: saturate(0.3) !important; /* Lowers saturation to 30% */
+}
+/* Ensure text remains highly readable */
+body.low-saturation-mode h1,
+body.low-saturation-mode h2,
+body.low-saturation-mode h3,
+body.low-saturation-mode p,
+body.low-saturation-mode span {
+  color: #000000 !important; /* Keep text black for contrast */
+}
+
+
+/* Monochrome Mode: Converts the page to grayscale */
+body.monochrome-mode {
+  filter: grayscale(100%) contrast(100%) !important; /* Removes all color */
+}
+/* Ensure text remains highly readable */
+body.monochrome-mode h1,
+body.monochrome-mode h2,
+body.monochrome-mode h3,
+body.monochrome-mode p,
+body.monochrome-mode span {
+  color: #000000 !important; /* Keep text black for contrast */
+}
+
+
+
+/* Low Brightness Mode: Dims the entire page */
+body.low-brightness-mode {
+  filter: brightness(70%) !important; /* Reduce brightness to 70% */
+  background-color: #ccc !important; 
+  color: #ccc !important; /* Light gray text for readability */
+}
+
+
+
+/* High Brightness Mode: Increases brightness across the page */
+body.high-brightness-mode {
+  filter: brightness(130%) !important; /* Increase brightness to 130% */
+  background-color: #ffffff !important; /* Bright white background */
+  color: #000000 !important; /* Sharp black text for contrast */
+}
+
+
+/* Hide Images Mode: Hides all images */
+body.hide-images-mode img {
+  display: none !important; /* Completely hides images */
+}
+
+/* Hide background images */
+body.hide-images-mode [style*="background-image"] {
+  background-image: none !important;
+}
+
+/* Ensure placeholders remain visible for structure */
+body.hide-images-mode .image-container,
+body.hide-images-mode .thumbnail,
+body.hide-images-mode .icon {
+  background-color: #ccc !important; /* Gray placeholder */
+}
+
+/* Highlight Hover Mode: Adds a bright outline around elements on hover */
+body.highlight-hover *:hover {
+  outline: 2px solid #144fc6 !important; /* Bright yellow outline */
+  transition: outline 0.2s ease-in-out, background-color 0.2s ease-in-out;
+}
+
+/* Ensure text elements also get highlighted */
+body.highlight-hover h1:hover,
+body.highlight-hover h2:hover,
+body.highlight-hover h3:hover,
+body.highlight-hover p:hover,
+body.highlight-hover span:hover {
+  color: #000000 !important; /* Keep text black for readability */
+  font-weight: bold !important;
+}
+
+/* Hide Default Cursor When Mode is Enabled */
+.big-dark-cursor {
+  cursor: none; /* Hide the default cursor */
+}
+
+/* Custom Big Dark Cursor (Larger Pointer Shape with Wider Tail) */
+.custom-cursor {
+  position: fixed;
+  width: 70px; /* Increased size */
+  height: 70px;
+  background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="black"><path d="M4 2 L14 12 L9 12 L13 22 L11 24 L7 14 L2 14 Z"/></svg>') 
+    no-repeat center center;
+  background-size: contain;
+  pointer-events: none; /* Allows interaction with elements below */
+  z-index: 9999;
+}
+
+
+/* Reading Guide Bar */
+.reading-guide-bar {
+  position: fixed;
+  width: 350px; /* Shorter width */
+  height: 14px; /* Thicker for better visibility */
+  background: rgba(0, 102, 255, 0.9); /* Bright blue */
+  border-radius: 20px; /* Curved edges */
+  z-index: 9999;
+  pointer-events: none; /* Allows clicking elements underneath */
+  transition: top 0.05s linear, left 0.05s linear; /* Smooth movement */
+}
+
+/* Triangle in the middle */
+.reading-guide-bar::before {
+  content: "";
+  position: absolute;
+  top: -8px; /* Moves the triangle above the bar */
+  left: 50%; /* Centers horizontally */
+  transform: translateX(-50%); /* Ensures perfect centering */
+  width: 0;
+  height: 0;
+  border-left: 8px solid transparent;
+  border-right: 8px solid transparent;
+  border-bottom: 10px solid black; /* Creates the black triangle */
+}
+
+/* Cognitive Reading Mode: Enhances readability */
+body.cognitive-reading {
+  background-color: #f5f5dc !important; /* Soft beige background for less strain */
+  font-size: 1.2em !important; /* Increase font size slightly */
+  line-height: 1.8 !important; /* Increase line height for better readability */
+  letter-spacing: 0.05em !important; /* Slightly increase letter spacing */
+  font-family: Arial, sans-serif !important; /* Use a clean, readable font */
+}
+
+/* Bold first few letters */
+body.cognitive-reading b {
+  font-weight: 850 !important; /* Bold letters for emphasis */
+ 
+}
+
+.text-to-speech-enabled p:hover,
+.text-to-speech-enabled h1:hover,
+.text-to-speech-enabled h2:hover,
+.text-to-speech-enabled h3:hover,
+.text-to-speech-enabled h4:hover,
+.text-to-speech-enabled span:hover,
+.text-to-speech-enabled li:hover,
+.text-to-speech-enabled a:hover {
+  cursor: pointer;
+  background-color: rgba(255, 215, 0, 0.2); /* Light highlight effect */
+  border-radius: 4px; /* Optional: adds smooth edges */
+}
+
+
+
+/* Styles for Readable Experience Section */
+.readable-experience-options {
+  margin-top: 15px;
+}
+
+.readable-experience-option {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 0;
+  
+}
+
+.readable-experience-option:last-child {
+  border-bottom: none;
+}
+
+.readable-experience-option .toggle-label {
+  font-size: 14px;
+  font-weight: 500;
+  
+}
+
+.readable-experience-option .switch .slider {
+  background-color: #bbb;
+}
+
+.readable-experience-option .switch input:checked + .slider
+ {
+  background-color: #4caf50; /* Green color for active toggle */
+}
+
+.readable-experience-option .switch input:checked + .slider:before{
+  transform: translateX(20px);
+}
+
+.readable-experience-options h3{
+  font-size: 16px;
+  font-weight: bold;
+  margin-bottom: 10px;
+
+}
+
+
+

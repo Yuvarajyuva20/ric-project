@@ -1,0 +1,112 @@
+/* src/pages/AdminPage.css */
+.admin-page {
+    text-align: center;
+}
+
+.admin-page h1 {
+    font-size: 2rem;
+    margin-bottom: 30px;
+    color: #431612;
+}
+
+.admin-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.a-btn {
+    padding: 10px 20px;
+    color: white;
+    background-color: #e5cf2a;
+    border: none;
+    border-radius: 50px;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+.a-btn:hover {
+    color: #e5cf2a;
+    background-color: #ffffff;
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+    .admin-buttons {
+        gap: 18px;
+    }
+    
+    .a-btn {
+        padding: 9px 18px;
+    }
+}
+
+@media (max-width: 992px) {
+    .admin-page h1 {
+        font-size: 1.9rem;
+        margin-bottom: 25px;
+    }
+    
+    .admin-buttons {
+        gap: 16px;
+    }
+    
+    .a-btn {
+        font-size: 15px;
+        padding: 8px 16px;
+    }
+}
+
+@media (max-width: 768px) {
+    .admin-page h1 {
+        font-size: 1.8rem; /* Slightly reduce heading size */
+    }
+
+    .admin-buttons {
+        flex-direction: column; /* Stack buttons vertically */
+        gap: 15px; /* Reduce gap between buttons */
+    }
+
+    .a-btn {
+        font-size: 14px; /* Adjust font size for smaller screens */
+        padding: 8px 16px; /* Reduce padding for a better fit */
+    }
+}
+
+@media (max-width: 576px) {
+    .admin-page h1 {
+        font-size: 1.6rem;
+        margin-bottom: 20px;
+    }
+    
+    .admin-buttons {
+        gap: 12px;
+    }
+    
+    .a-btn {
+        font-size: 13px;
+        padding: 7px 14px;
+    }
+}
+
+@media (max-width: 480px) {
+    .admin-page h1 {
+        font-size: 1.5rem; /* Further reduce heading size for very small screens */
+    }
+
+    .a-btn {
+        font-size: 12px; /* Smaller button font size */
+        padding: 6px 12px; /* Reduce padding further */
+    }
+}
+
+@media (max-width: 400px) {
+    .admin-page h1 {
+        font-size: 1.4rem;
+    }
+    
+    .a-btn {
+        font-size: 11px;
+        padding: 5px 10px;
+    }
+}

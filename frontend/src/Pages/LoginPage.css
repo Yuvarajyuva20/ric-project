@@ -1,0 +1,305 @@
+/* Main content */
+.main {
+    text-align: center;
+}
+
+h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: #431612;
+}
+
+.content{
+    text-align: center;
+}
+
+/* Keyframe animation for floating effect */
+@keyframes floatUp {
+    from {
+        transform: translateY(100vh);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* Form styling */
+form {
+    max-width: 450px;
+    margin: 0 auto;
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.1);
+    animation: floatUp 1s ease-out;
+    animation-fill-mode: forwards;
+}
+
+/* Form elements */
+.lform-group {
+    margin-bottom: 25px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.lform-group label {
+    display: inline-block;
+    font-weight: bold;
+    margin-bottom: 0;
+    width: 100px;
+    color: #555;
+}
+
+.lform-group input {
+    flex-grow: 1;
+    padding: 14px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+    background: #fafafa;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease-in-out;
+}
+
+.lform-group input:focus {
+    border-color: #ffcc00;
+    box-shadow: 0 0 8px rgba(255, 204, 0, 0.5);
+    outline: none;
+}
+
+/* Button styling */
+.login-btn {
+    width: 100%;
+    padding: 14px;
+    background-color: #ffe70c;
+    border: none;
+    border-radius: 8px;
+    font-size: 18px;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    margin-top: 20px;
+}
+
+.login-btn:hover {
+    background-color: #e9d92a;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+    transform: scale(1.03);
+}
+
+/* Register link */
+.register-link {
+    margin-top: 20px;
+    font-size: 16px;
+}
+
+.register-link a {
+    color: #e5cf2a;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.register-link a:hover {
+    text-decoration: underline;
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+    form {
+        max-width: 400px;
+    }
+    
+    h1 {
+        font-size: 2.2rem;
+    }
+    
+    .lform-group label {
+        width: 90px;
+    }
+}
+
+@media (max-width: 992px) {
+    form {
+        max-width: 380px;
+        padding: 25px;
+    }
+    
+    h1 {
+        font-size: 2rem;
+    }
+    
+    .lform-group input {
+        padding: 12px;
+        font-size: 15px;
+    }
+    
+    .login-btn {
+        padding: 12px;
+        font-size: 17px;
+    }
+}
+
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2rem;
+    }
+
+    form {
+        padding: 20px;
+        max-width: 90%;
+    }
+
+    .lform-group {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .lform-group label {
+        width: 100%;
+        text-align: left;
+    }
+
+    .lform-group input {
+        font-size: 14px;
+        padding: 12px;
+        width: 100%;
+    }
+
+    .login-btn {
+        padding: 12px;
+        font-size: 16px;
+    }
+
+    .register-link {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 576px) {
+    h1 {
+        font-size: 1.7rem;
+    }
+    
+    form {
+        padding: 18px;
+    }
+    
+    .lform-group {
+        gap: 8px;
+        margin-bottom: 20px;
+    }
+    
+    .login-btn {
+        padding: 11px;
+        font-size: 15px;
+    }
+    
+    .register-link {
+        font-size: 13px;
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 1.5rem;
+    }
+
+    form {
+        padding: 15px;
+        max-width: 95%;
+    }
+
+    .lform-group {
+        gap: 8px;
+    }
+
+    .lform-group input {
+        font-size: 14px;
+        padding: 10px;
+    }
+
+    .login-btn {
+        padding: 10px;
+        font-size: 14px;
+    }
+
+    .register-link {
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 360px) {
+    h1 {
+        font-size: 1.4rem;
+    }
+    
+    form {
+        padding: 12px;
+    }
+    
+    .lform-group input {
+        padding: 8px;
+        font-size: 13px;
+    }
+    
+    .login-btn {
+        padding: 9px;
+        font-size: 13px;
+    }
+    
+    .register-link {
+        font-size: 11px;
+    }
+}
+
+/* Forgot Password Styles */
+.message {
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 4px;
+    text-align: center;
+  }
+  
+  .message.error {
+    background-color: #ffebee;
+    color: #c62828;
+    border: 1px solid #ef9a9a;
+  }
+  
+  .message.success {
+    background-color: #e8f5e9;
+    color: #2e7d32;
+    border: 1px solid #a5d6a7;
+  }
+  
+  
+  /* Add these styles to your existing CSS file */
+/* Forgot Password Styles */
+.forgot-password-container {
+    width: 100%;
+    text-align:right;
+    margin-top: 0;
+    margin-bottom: 0;
+    padding: 0;
+  }
+  
+  .forgot-password-link {
+    color: #431612;
+    text-decoration:solid;
+    font-size: 0.9rem;
+    display: inline-block;
+  }
+  
+  .forgot-password-link:hover {
+    text-decoration: underline;
+  }
+  
+  /* Adjust the login button margin */
+  .login-btn {
+    margin-top: 20px;
+  }
+  
+  /* Remove any other conflicting forgot password styles */

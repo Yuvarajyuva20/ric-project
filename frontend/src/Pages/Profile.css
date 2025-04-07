@@ -1,0 +1,747 @@
+/* General Styles for Profile Container */
+.profile-container {
+  line-height: 1.8;
+  padding-left: 20px;
+  padding-right: 20px;
+  background: linear-gradient(135deg, #f0f4f8, #e0e9f2);
+  color: #333;
+  overflow-x: hidden;
+  position: relative; /* Add this */
+  min-height: 100vh; /* Add this to ensure footer pushes to bottom */
+}
+
+/* Section Styling */
+.profile-section {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.profile-section.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Headings with Gradient Text and Animation */
+.profile-heading {
+  font-size: 2.8rem;
+  background: linear-gradient(90deg, #800000, #ff4500);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  margin-bottom: 30px;
+  display: inline-block;
+  position: relative;
+  animation: slideInLeft 1s ease-out;
+}
+
+.profile-heading::after {
+  content: '';
+  display: block;
+  width: 100%;
+  height: 4px;
+  background: linear-gradient(90deg, #ff4500, #ffd700);
+  position: absolute;
+  bottom: -10px;
+  left: 0;
+  animation: underlineGrow 1.5s ease-out;
+}
+
+
+/* Services Section - Updated */
+.profile-services {
+  padding: 30px;
+  border-radius: 15px;
+  margin: 40px 0;
+  background: linear-gradient(to right, #ffe0e0 0%, #f3e7e7 30%, #ffffff 100%);
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.profile-services.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Ensure text remains readable */
+.profile-services .profile-heading,
+.profile-services .profile-subheading,
+.profile-services .profile-paragraph,
+.profile-services .profile-list {
+  position: relative;
+  z-index: 1;
+}
+
+
+@keyframes slideInLeft {
+  from {
+      transform: translateX(-100%);
+      opacity: 0;
+  }
+  to {
+      transform: translateX(0);
+      opacity: 1;
+  }
+}
+
+@keyframes underlineGrow {
+  from {
+      width: 0;
+  }
+  to {
+      width: 100%;
+  }
+}
+
+/* Subheadings */
+.profile-subheading {
+  font-size: 2rem;
+  color: #444;
+  margin-top: 30px;
+  animation: fadeIn 1.5s ease-out;
+}
+
+@keyframes fadeIn {
+  from {
+      opacity: 0;
+      transform: translateY(20px);
+  }
+  to {
+      opacity: 1;
+      transform: translateY(0);
+  }
+}
+
+/* Paragraphs and Lists */
+.profile-paragraph,
+.profile-list {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  animation: fadeInUp 1.5s ease-out;
+}
+
+.profile-list {
+  list-style-type: disc;
+  margin-left: 30px;
+}
+
+.profile-list li {
+  margin-bottom: 15px;
+}
+
+@keyframes fadeInUp {
+  from {
+      opacity: 0;
+      transform: translateY(20px);
+  }
+  to {
+      opacity: 1;
+      transform: translateY(0);
+  }
+}
+
+/* Thrust Images */
+.profile-thrust-images {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin-top: 20px;
+  gap: 20px;
+}
+
+.profile-image {
+  width: calc(23% - 15px);
+  border-radius: 15px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  object-fit: cover;
+  animation: zoomIn 1s ease-out;
+}
+
+.profile-image:hover {
+  transform: scale(1.1);
+
+}
+
+@keyframes zoomIn {
+  from {
+      transform: scale(0.8);
+      opacity: 0;
+  }
+  to {
+      transform: scale(1);
+      opacity: 1;
+  }
+}
+
+/* Enhanced Responsive Design */
+@media (max-width: 1200px) {
+  .profile-container {
+      padding: 35px 18px;
+  }
+  
+  .profile-heading {
+      font-size: 2.5rem;
+  }
+  
+  .profile-subheading {
+      font-size: 1.8rem;
+  }
+  
+  .profile-image {
+      width: calc(33.33% - 14px);
+  }
+}
+
+@media (max-width: 992px) {
+  .profile-container {
+      padding: 30px 15px;
+  }
+  
+  .profile-heading {
+      font-size: 2.2rem;
+  }
+  
+  .profile-subheading {
+      font-size: 1.7rem;
+  }
+  
+  .profile-paragraph,
+  .profile-list {
+      font-size: 1.05rem;
+  }
+  
+  .profile-thrust-images {
+      gap: 15px;
+  }
+}
+
+@media (max-width: 768px) {
+  .profile-heading {
+      font-size: 2rem;
+  }
+
+  .profile-subheading {
+      font-size: 1.6rem;
+  }
+
+  .profile-paragraph,
+  .profile-list {
+      font-size: 1rem;
+  }
+
+  .profile-image {
+      width: calc(50% - 10px);
+  }
+  
+  .profile-list {
+      margin-left: 25px;
+  }
+}
+
+@media (max-width: 576px) {
+  .profile-container {
+      padding: 25px 12px;
+  }
+  
+  .profile-heading {
+      font-size: 1.8rem;
+      margin-bottom: 20px;
+  }
+  
+  .profile-heading::after {
+      height: 3px;
+      bottom: -8px;
+  }
+  
+  .profile-subheading {
+      font-size: 1.4rem;
+      margin-top: 20px;
+  }
+  
+  .profile-section {
+      margin-bottom: 40px;
+  }
+  
+  .profile-thrust-images {
+      gap: 12px;
+      margin-top: 15px;
+  }
+  
+  .profile-list {
+      margin-left: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .profile-heading {
+      font-size: 1.6rem;
+  }
+  
+  .profile-subheading {
+      font-size: 1.3rem;
+  }
+  
+  .profile-paragraph,
+  .profile-list {
+      font-size: 0.95rem;
+  }
+  
+  .profile-image {
+      width: 100%;
+      max-width: 300px;
+      margin: 0 auto;
+  }
+  
+  .profile-thrust-images {
+      flex-direction: column;
+      align-items: center;
+  }
+}
+
+@media (max-width: 360px) {
+  .profile-container {
+      padding: 20px 10px;
+  }
+  
+  .profile-heading {
+      font-size: 1.4rem;
+  }
+  
+  .profile-subheading {
+      font-size: 1.2rem;
+  }
+  
+  .profile-list {
+      margin-left: 18px;
+  }
+  
+  .profile-list li {
+      margin-bottom: 8px;
+  }
+}
+
+/* Add these styles at the end of your existing CSS */
+/* Contact Us Section */
+.profile-contact-us {
+  padding: 30px;
+  border-radius: 15px;
+  margin: 40px 0;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.342);
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+  background-image: url('../Components/Assets/contact.jpg'); /* Update with your image path */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.profile-contact-us.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+  margin-top: 30px;
+}
+
+.contact-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 20px;
+  border-radius: 10px;
+  transition: transform 0.3s ease;
+}
+
+.contact-item:hover {
+  transform: translateY(-5px);
+}
+
+.contact-icon {
+  width: 50px;
+  height: 50px;
+  margin-bottom: 15px;
+  object-fit: contain;
+}
+
+.contact-content {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.contact-content strong {
+  font-size: 1.1rem;
+  color: #800000;
+}
+
+.contact-content a {
+  color: #333;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.contact-content a:hover {
+  color: #ff4500;
+  text-decoration: underline;
+}
+
+.contact-address {
+  line-height: 1.6;
+  font-style: italic;
+}
+
+
+/* Full width image section */
+.profile-image-section {
+  height: 70%;
+  padding: 0;
+
+}
+
+.full-width-image {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Icons section */
+.profile-icons-section {
+  text-align: center;
+  padding: 60px 0;
+  background-color: #f8f9fa;
+
+}
+
+.icons-container {
+  display: flex;
+  justify-content: space-around;
+  max-width: 1000px;
+  margin: 0 auto;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.icon-item {
+  flex: 1;
+  min-width: 250px;
+  padding: 20px;
+  transition: transform 0.3s ease;
+}
+
+.icon-item:hover {
+  transform: translateY(-10px);
+}
+
+.icon-circle {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  background-color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 20px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.icon-circle:hover {
+  transform: scale(1.05);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+}
+
+.icon-image {
+  width: 60px;
+  height: 60px;
+  object-fit: contain;
+}
+
+.icon-item h3 {
+  margin-top: 15px;
+  font-size: 1.5rem;
+  color: #2c3e50;
+  font-weight: 600;
+}
+/* Footer Styles */
+
+.profile-footer {
+  background-color: #431612;
+  color: #fff;
+  padding: 10px 20px;
+  text-align: center;
+  box-shadow: 0 -5px 15px rgba(0, 0, 0, 0.4);
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+  position: relative; /* Add this */
+  z-index: 10; /* Add this */
+  width: 100%; /* Add this */
+}
+
+.profile-footer.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.footer-content {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.profile-footer p {
+  margin: 10px 0;
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+.footer-links {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.footer-links a {
+  color: #fff;
+  text-decoration: none;
+  transition: color 0.3s ease;
+  font-size: 0.9rem;
+}
+
+.footer-links a:hover {
+  color: #ffd700;
+  text-decoration: underline;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .profile-footer {
+    padding: 30px 15px;
+  }
+  
+  .footer-links {
+    flex-direction: column;
+    gap: 10px;
+  }
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .icons-container {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .icon-item {
+    margin-bottom: 30px;
+  }
+  
+  .icon-circle {
+    width: 100px;
+    height: 100px;
+  }
+  
+  .icon-image {
+    width: 50px;
+    height: 50px;
+  }
+}
+
+
+@media (max-width: 576px) {
+  .contact-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .contact-item {
+    padding: 15px;
+  }
+  
+  .contact-icon {
+    width: 40px;
+    height: 40px;
+  }
+}
+
+/* Programs Section - Updated */
+.profile-programs {
+  padding: 30px;
+  margin: 40px 0;
+  background: linear-gradient(to right, #f9f9f9 0%, #ffffff 100%);
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.profile-programs.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.profile-programs::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 25%;
+  height: 40px;
+  background: #ffe554;
+}
+
+.profile-programs::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 25%;
+  height: 40px;
+  background: #ffe554;
+}
+
+/* Ensure text remains readable */
+.profile-programs .profile-heading,
+.profile-programs .profile-subheading,
+.profile-programs .profile-paragraph {
+  position: relative;
+  z-index: 1;
+}
+
+.profile-services {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px;
+}
+
+.services-content {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 20px;
+  width: 100%;
+}
+
+.services-text {
+  flex: 1; /* Allows text content to take available space */
+}
+
+.services-image {
+  flex: 0.4; /* Adjust size */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.bg12-image {
+  opacity: 0.6;
+  width: 700px; /* Increase width */
+  height: 1300px; /* Maintain aspect ratio */
+}
+/* About Us Container */
+.about-us-container {
+  background: white;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  margin: 40px 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.about-us-content {
+  display: flex;
+  min-height: 500px;
+}
+
+.about-us-text {
+  flex: 1;
+  padding: 50px;
+  z-index: 2;
+}
+
+/* Slanting Divider with Image */
+.about-us-image-wrapper {
+  position: relative;
+  width: 45%;
+  overflow: hidden;
+}
+
+.slanting-divider {
+  position: absolute;
+  top: 0;
+  left: -100px;
+  width: calc(100% + 200px);
+  height: 100%;
+  background: white;
+  transform: skewX(-15deg);
+  transform-origin: top left;
+  z-index: 1;
+  box-shadow: 5px 0 15px rgba(0, 0, 0, 0.1);
+}
+
+.about-us-image {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 2;
+  /* Remove the skew transformation to keep image straight */
+  transform: none;
+  /* Adjust positioning to account for the slant */
+  margin-left: 100px;
+  clip-path: polygon(15% 0%, 100% 0%, 85% 100%, 0% 100%);
+}
+/* Responsive Design */
+@media (max-width: 992px) {
+  .about-us-content {
+    flex-direction: column;
+    min-height: auto;
+  }
+  
+  .about-us-image-wrapper {
+    width: 100%;
+    height: 400px;
+  }
+  
+  .slanting-divider {
+    transform: skewX(-10deg);
+    left: -50px;
+  }
+  
+  .about-us-image {
+    clip-path: polygon(10% 0%, 100% 0%, 90% 100%, 0% 100%);
+    margin-left: 50px;
+  }
+}
+
+@media (max-width: 768px) {
+  .about-us-text {
+    padding: 30px;
+  }
+  
+  .about-us-image-wrapper {
+    height: 300px;
+  }
+  
+  .slanting-divider {
+    transform: skewX(-5deg);
+  }
+  
+  .about-us-image {
+    clip-path: polygon(5% 0%, 100% 0%, 95% 100%, 0% 100%);
+  }
+}

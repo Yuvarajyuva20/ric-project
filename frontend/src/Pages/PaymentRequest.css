@@ -1,0 +1,62 @@
+
+  
+  .export-button {
+    padding: 8px 12px;
+    font-size: 14px;
+    font-weight: bold;
+    color: white;
+    background-color: #431612;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    margin-left: 10px;
+  }
+  
+  .export-button:hover {
+    background-color: #431612;
+  }
+
+/* Payment Proof Styles */
+.payment-proof-section {
+    margin-top: 20px;
+    padding-top: 20px;
+    border-top: 1px solid #eee;
+    text-align: center;
+  }
+  
+  .proof-container {
+    margin-top: 10px;
+  }
+  
+  .proof-image {
+    max-width: 100%;
+    max-height: 300px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: transform 0.3s;
+  }
+  
+  .proof-image:hover {
+    transform: scale(1.02);
+  }
+  
+  .proof-actions {
+    margin-top: 15px;
+  }
+  
+  .download-button {
+    padding: 8px 20px;
+    background-color: #2196F3;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.3s;
+  }
+  
+  .download-button:hover {
+    background-color: #0b7dda;
+  }

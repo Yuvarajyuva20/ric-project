@@ -1,0 +1,178 @@
+/* General Page Styling */
+.all-instruments-container {
+  width: 60%;
+  margin: auto;
+  text-align: center;
+  padding: 20px;
+}
+
+.all-instruments-container h1 {
+  font-size: 28px;
+  font-weight: bold;
+  margin-bottom: 30px;
+  color: #333;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+}
+
+/* List Layout: One Below the Other */
+.viewinstrument-list {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  padding: 0;
+  width: 100%;
+  align-items: center;
+}
+
+/* Individual Instrument Item */
+.viewinstrument-item {
+  width: 100%;
+  max-width: 600px;
+  background: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  padding: 15px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.viewinstrument-item:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Instrument Name */
+.viewinstrument-name {
+  font-size: 18px;
+  font-weight: 600;
+  color: #444;
+  flex: 1;
+  text-align: left;
+}
+
+/* View Button */
+.view-btns {
+  background: linear-gradient(135deg, #007bff, #0056b3);
+  color: white;
+  border: none;
+  padding: 8px 15px;
+  cursor: pointer;
+  border-radius: 5px;
+  font-size: 14px;
+  font-weight: bold;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.view-btns:hover {
+  background: linear-gradient(135deg, #0056b3, #003c80);
+  transform: scale(1.05);
+}
+
+/* Error Message */
+.error-message {
+  color: red;
+  font-size: 16px;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+  .all-instruments-container {
+      width: 70%;
+  }
+}
+
+@media (max-width: 992px) {
+  .all-instruments-container {
+      width: 80%;
+  }
+  
+  .all-instruments-container h1 {
+      font-size: 26px;
+      margin-bottom: 25px;
+  }
+  
+  .viewinstrument-item {
+      padding: 14px 18px;
+  }
+  
+  .viewinstrument-name {
+      font-size: 17px;
+  }
+}
+
+@media (max-width: 768px) {
+  .all-instruments-container {
+      width: 90%;
+  }
+
+  .viewinstrument-item {
+      max-width: 100%;
+      padding: 12px;
+  }
+
+  .view-btns {
+      padding: 6px 12px;
+      font-size: 12px;
+  }
+}
+
+@media (max-width: 576px) {
+  .all-instruments-container {
+      width: 95%;
+      padding: 15px;
+  }
+  
+  .all-instruments-container h1 {
+      font-size: 22px;
+      letter-spacing: 1px;
+      margin-bottom: 20px;
+  }
+  
+  .viewinstrument-item {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 10px;
+  }
+  
+  .viewinstrument-name {
+      font-size: 16px;
+  }
+  
+  .view-btns {
+      align-self: flex-end;
+      padding: 5px 10px;
+  }
+}
+
+@media (max-width: 400px) {
+  .all-instruments-container h1 {
+      font-size: 20px;
+  }
+  
+  .viewinstrument-name {
+      font-size: 15px;
+  }
+  
+  .error-message {
+      font-size: 14px;
+  }
+}
+
+.delete-btn {
+  background-color: red;
+  color: white;
+  border: none;
+  padding: 6px 10px;
+  margin-left: 10px;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.delete-btn:hover {
+  background-color: darkred;
+}

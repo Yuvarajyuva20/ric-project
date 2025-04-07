@@ -1,0 +1,26 @@
+.accessibility-icon {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    width: 50px;
+    height: 50px;
+    background-color: #FFD700;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    z-index: 1000;
+  }
+  
+  .accessibility-icon span {
+    font-size: 24px;
+    color: #431612; /* Change the icon color here */
+  }
+  
+  .accessibility-icon:hover {
+    background-color: #FFC107;
+  }
+  
+  
