@@ -170,7 +170,7 @@ const ForgotPassword = () => {
       )}
 
       <div className="login-link">
-        <p>Remember your password? <a href="/">Login here</a></p>
+        <p>Remember your password? <a href="/LoginPage">Login here</a></p>
       </div>
     </main>
   );
