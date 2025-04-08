@@ -30,14 +30,20 @@ const AllInstruments = () => {
   const handleDelete = async (id) => {
     if (window.confirm("Are you sure you want to delete this instrument?")) {
       try {
-        const response = await fetch(`http://localhost:4000/instrument/${id}`, {
-          method: "DELETE",
+        const response = await fetch("http://localhost:4000/remove_instrument", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({ ins_id: id }),
         });
-
-        if (!response.ok) {
-          throw new Error("Failed to delete instrument");
+  
+        const result = await response.json();
+  
+        if (!response.ok || !result.success) {
+          throw new Error(result.message || "Failed to delete instrument");
         }
-
+  
         // Remove the deleted instrument from the UI
         setInstruments(instruments.filter((instrument) => instrument.ins_id !== id));
       } catch (error) {
@@ -45,6 +51,7 @@ const AllInstruments = () => {
       }
     }
   };
+  
 
   return (
     <div className="all-instruments-container">
